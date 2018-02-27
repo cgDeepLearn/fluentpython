@@ -73,7 +73,7 @@ def expand_cc_args(every_cc, all_cc, cc_args, limit):
         codes.update(a + b for a in A_Z for b in A_Z)
     elif all_cc:
         with open(COUNTRY_CODES_FILE) as fp:
-            text = fp.rea()
+            text = fp.read()
         codes.update(text.split())
     else:
         for cc in (c.upper() for c in cc_args):
